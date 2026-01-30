@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GitHub Webhook Monitor</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      .event {
+        border-left: 5px solid #28a745;
+        background: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      small {
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Recent GitHub Activity</h1>
+    <div id="display-area">Loading events...</div>
+
+    <script>
+      function loadData() {
+        fetch("/webhook/data")
+          .then((res) => res.json())
+          .then((data) => {
+            const area = document.getElementById("display-area");
+            area.innerHTML = "";
+            data.events.forEach((e) => {
+              area.innerHTML += `<div class="event">
+                        <strong>${e.display_message}</strong><br>
+                        <small>${e.timestamp}</small>
+                    </div>`;
+            });
+          });
+      }
+      setInterval(loadData, 15000); //refreshing every 15 seconds
+      loadData();
+    </script>
+  </body>
+</html>
