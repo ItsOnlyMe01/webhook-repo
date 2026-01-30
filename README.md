@@ -35,3 +35,6 @@ Where to test:
     Receiver: POST http://127.0.0.1:5000/webhook/receiver.
 
     UI: http://127.0.0.1:5000/webhook/
+
+screenshot of output:-
+https://drive.google.com/file/d/1KgdgRNVTaOmuYQ3JNCej9sYdKs7r2BO6/view?usp=sharing
