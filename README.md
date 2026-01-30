@@ -17,18 +17,20 @@ How to run it:
     setup the environment
     Bash
 
+    # Create the virtual environment
     python -m venv venv
-    .\venv\Scripts\activate
 
-    install libraries
-    Bash
+# Activate the virtual environment
 
-    pip install -r requirements.txt
+.\venv\Scripts\activate
 
-    start the server
-    Bash
+# Install the required dependencies from requirements.txt
 
-    python run.py
+pip install -r requirements.txt
+
+# Run the application
+
+python run.py
 
 Where to test:
 
