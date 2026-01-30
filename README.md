@@ -14,23 +14,18 @@ What I added:
 
 How to run it:
 
-    setup the environment
-    Bash
+    setup the environment:-
 
-    # Create the virtual environment
     python -m venv venv
+    .\venv\Scripts\activate
 
-# Activate the virtual environment
+    install libraries:-
 
-.\venv\Scripts\activate
+    pip install -r requirements.txt
 
-# Install the required dependencies from requirements.txt
+    start the server:-
 
-pip install -r requirements.txt
-
-# Run the application
-
-python run.py
+    python run.py
 
 Where to test:
 
